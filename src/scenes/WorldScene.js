@@ -926,6 +926,7 @@ class WorldScene extends Phaser.Scene {
         this.toastText.setOrigin(1, 0);
         this.toastText.setScrollFactor(0);
         this.toastText.setDepth(401);
+        this.toastText.setVisible(false);
     }
 
     createStarterSelectionOverlay() {
@@ -1614,8 +1615,10 @@ class WorldScene extends Phaser.Scene {
 
     showToast(message) {
         this.toastText.setText(message);
+        this.toastText.setVisible(true);
         this.time.delayedCall(1400, () => {
             this.toastText.setText('');
+            this.toastText.setVisible(false);
         });
     }
 
