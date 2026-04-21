@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireRed Mini Browser Demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 20% 15%, rgba(244, 170, 96, 0.28), transparent 28%),
+                radial-gradient(circle at 80% 25%, rgba(114, 168, 255, 0.22), transparent 30%),
+                linear-gradient(180deg, #201919 0%, #0d0d10 100%);
+            font-family: Arial, sans-serif;
+            color: #f8f6ef;
+        }
+
+        .game-shell {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            touch-action: none;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="game-shell" class="game-shell"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <script src="src/data/GameConfig.js?v=20260420an"></script>
+    <script src="src/utils/Collision.js?v=20260420an"></script>
+    <script src="src/utils/Movement.js?v=20260420an"></script>
+    <script src="src/utils/Math.js?v=20260420an"></script>
+    <script src="src/data/MapData.js?v=20260420an"></script>
+    <script src="src/systems/EventFlags.js?v=20260420an"></script>
+    <script src="src/systems/SaveManager.js?v=20260420an"></script>
+    <script src="src/systems/DialogueManager.js?v=20260420an"></script>
+    <script src="src/systems/BattleManager.js?v=20260420an"></script>
+    <script src="src/ui/DialogueBox.js?v=20260420an"></script>
+    <script src="src/ui/BattleUI.js?v=20260420an"></script>
+    <script src="src/ui/PartyPanel.js?v=20260420an"></script>
+    <script src="src/entities/Pokemon.js?v=20260420an"></script>
+    <script src="src/entities/Party.js?v=20260420an"></script>
+    <script src="src/data/PokemonData.js?v=20260420an"></script>
+    <script src="src/data/BattleAssetManifest.js?v=20260420an"></script>
+    <script src="src/data/MoveData.js?v=20260420an"></script>
+    <script src="src/data/NPCData.js?v=20260420an"></script>
+    <script src="src/data/TrainerData.js?v=20260420an"></script>
+    <script src="src/data/WildEncounterData.js?v=20260420an"></script>
+    <script src="src/scenes/BootScene.js?v=20260420an"></script>
+    <script src="src/scenes/TitleScene.js?v=20260420an"></script>
+    <script src="src/scenes/IntroScene.js?v=20260420an"></script>
+    <script src="src/scenes/PreloadScene.js?v=20260420an"></script>
+    <script src="src/scenes/WorldScene.js?v=20260420an"></script>
+    <script src="src/scenes/BattleScene.js?v=20260420an"></script>
+    <script src="src/main.js?v=20260420an"></script>
+</body>
+</html>

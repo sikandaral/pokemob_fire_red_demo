@@ -1,0 +1,21 @@
+{
+  "name": "firered-mini-demo",
+  "version": "1.0.0",
+  "description": "Pokémon FireRed inspired browser demo built with Phaser 3",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -c-1 -o index.html",
+    "dev": "npx http-server -c-1",
+    "generate:maps": "python3 generate_firered_map_backgrounds.py"
+  },
+  "keywords": [
+    "phaser",
+    "pokemon",
+    "game"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
