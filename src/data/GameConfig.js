@@ -1,0 +1,76 @@
+/**
+ * GameConfig.js
+ * Central place for all shared configuration and small gameplay constants.
+ */
+
+const GameConfig = {
+    TILE_SIZE: 16,
+    SCREEN_WIDTH: 480,
+    SCREEN_HEIGHT: 320,
+    MOVEMENT_SPEED: 100,
+    TILE_WALK_TIME: 140,
+    INTERACT_DEBOUNCE: 180,
+    CONFIRM_DEBOUNCE: 180,
+    SAVE_DEBOUNCE: 400,
+    COLORS: {
+        PLAYER: 0xd04040,
+        NPC: 0x5080c0,
+        NPC_GUIDE: 0xe8c848,
+        TRAINER: 0xc07050,
+        LEADER: 0x8858c0,
+        GRASS: 0x8bdebd,
+        PATH: 0xd8d0a0,
+        FLOOR: 0xd0c8b8,
+        WATER: 0x5890d0,
+        WALL: 0x889098,
+        DOOR: 0xc08848,
+        BACKGROUND: 0x1f1f1f,
+        TEXT: 0xf8f6ef,
+        TEXT_MUTED: 0xd7d2c7,
+        UI_BG: 0x1f2430,
+        UI_PANEL: 0x2d3445,
+        UI_BORDER: 0xf8f6ef,
+        HP_GOOD: 0x58a850,
+        HP_WARN: 0xe0b040,
+        HP_DANGER: 0xd05050,
+    },
+    AREAS: {
+        TOWN: 'town',
+        ROUTE: 'route',
+        ROUTE2: 'route2',
+        FOREST: 'forest',
+        VIRIDIAN: 'viridian',
+        PEWTER: 'pewter',
+        MART: 'mart',
+        POKEMON_CENTER: 'pokemon_center',
+        LAB: 'lab',
+        GYM: 'gym',
+    },
+    TILES: {
+        GRASS: 0,
+        WATER: 1,
+        WALL: 2,
+        PATH: 3,
+        FLOOR: 4,
+        DOOR: 5,
+    },
+    WALKABLE_TILES: [0, 3, 4, 5],
+    DIALOGUE_BOX_WIDTH: 420,
+    DIALOGUE_BOX_HEIGHT: 100,
+    DIALOGUE_PADDING: 12,
+    DIALOGUE_LINE_HEIGHT: 16,
+    DIALOGUE_SPEED: 18,
+    BATTLE_LOG_LINES: 4,
+    MOVE_MENU_COLS: 2,
+    EXP_FORMULA(level) {
+        return level * 90;
+    },
+    MOVE_BASE_POWER_MULTIPLIER: 2,
+    NPC_INTERACT_RANGE: 1,
+    START_AREA: 'town',
+    START_POSITION: { x: 12, y: 9 },
+    DEFAULT_OBJECTIVE: 'Try heading north out of Pallet Town.',
+    TOWN_RETURN_OBJECTIVE: 'Return to Pallet Town and talk to Professor Oak.',
+};
+
+Object.freeze(GameConfig);
